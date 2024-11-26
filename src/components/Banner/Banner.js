@@ -1,24 +1,28 @@
 import React from "react";
 
-function Banner({ moves, state, answer }) {
-  const happyBanner = (
-    <div className="happy banner">
+function Banner({ status, children }) {
+  return <div className={`${status} banner`}>{children}</div>;
+}
+
+export function WonBanner({ moves }) {
+  return (
+    <Banner status="happy">
       <p>
         <strong>Congratulations!</strong> Got it in{" "}
-        <strong>{moves} guesses</strong>.
+        <strong>{moves > 1 ? `${moves} guesses` : "1 guess"}</strong>.
       </p>
-    </div>
+    </Banner>
   );
-  const sadBanner = (
-    <div className="sad banner">
+}
+
+export function LostBanner({ answer }) {
+  return (
+    <Banner status="sad">
       <p>
         Sorry, the correct answer is <strong>{answer}</strong>.
       </p>
-    </div>
+    </Banner>
   );
-
-  const endBanner = state === "win" ? happyBanner : sadBanner;
-  return endBanner;
 }
 
 export default Banner;

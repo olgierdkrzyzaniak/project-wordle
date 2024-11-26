@@ -105,6 +105,7 @@ h1 {
   border: 2px solid var(--color-gray-700);
   border-radius: var(--radius);
   font-size: 2rem;
+  font-weight: 700;
 }
 
 /*
@@ -130,14 +131,22 @@ h1 {
   color: white;
 }
 .cell.incorrect {
-  background: var(--color-gray-300);
-  border-color: var(--color-gray-300);
+  background: var(--color-gray-500);
+  border-color: var(--color-gray-500);
   color: white;
 }
 .cell.misplaced {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
+}
+
+.key {
+  width: min-content;
+  border-radius: 4px;
+  padding: 16px 12px;
+  background: var(--color-gray-700);
+  font-weight: 700;
 }
 
 .guess-input-wrapper {
