@@ -142,14 +142,37 @@ h1 {
 }
 
 .key {
-  width: min-content;
   border-radius: 4px;
   padding: 16px 12px;
   background: var(--color-gray-700);
   font-weight: 700;
 }
 
-.guess-input-wrapper {
+.key.correct {
+  background-color: var(--color-success);
+}
+
+.key.misplaced {
+  background: var(--color-warning);
+}
+
+.key.incorrect {
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+
+.keyboard .row {
+  display: flex;
+  gap: 4px;
+}
+
+.keyboard .guess-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;

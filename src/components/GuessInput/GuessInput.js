@@ -1,7 +1,7 @@
 import React from "react";
-import { Key } from "../Keyboard/Keyboard";
+import Keyboard from "../Keyboard/Keyboard";
 
-function GuessInput({ handleNewGuess, isGameOn }) {
+function GuessInput({ handleNewGuess, isGameOn, letterStatuses }) {
   const [inputValue, setInputValue] = React.useState("");
 
   const handleGuessSubmit = (event) => {
@@ -18,7 +18,13 @@ function GuessInput({ handleNewGuess, isGameOn }) {
   };
 
   const handleKeyPress = (keyChar) => {
+    if (!isGameOn) return;
+    if (inputValue.length >= 5) return;
     setInputValue(inputValue + keyChar);
+  };
+
+  const handleDelete = () => {
+    setInputValue(inputValue.slice(0, -1));
   };
 
   return (
@@ -36,7 +42,11 @@ function GuessInput({ handleNewGuess, isGameOn }) {
           title="5 letter word"
         />
       </form>
-      <Key value="Z" handleKeyPress={handleKeyPress} />
+      <Keyboard
+        handleKeyPress={handleKeyPress}
+        handleDelete={handleDelete}
+        letterStatuses={letterStatuses}
+      />
     </>
   );
 }

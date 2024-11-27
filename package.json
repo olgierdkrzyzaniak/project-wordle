@@ -4,6 +4,7 @@
   "private": true,
   "author": "Josh Comeau <me@joshwcomeau.com>",
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
     "eslint": "8.49.0",
     "eslint-config-react-app": "7.0.1",
     "new-component": "5.0.2",
