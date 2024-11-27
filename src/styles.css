@@ -142,9 +142,11 @@ h1 {
 }
 
 .key {
+  text-align: center;
+  width: 35px;
   border-radius: 4px;
   padding: 16px 12px;
-  background: var(--color-gray-700);
+  background: var(--color-gray-900);
   font-weight: 700;
 }
 
@@ -157,6 +159,7 @@ h1 {
 }
 
 .key.incorrect {
+  background: var(--color-gray-900);
 }
 
 .keyboard {

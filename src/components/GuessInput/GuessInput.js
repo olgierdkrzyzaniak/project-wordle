@@ -24,6 +24,7 @@ function GuessInput({ handleNewGuess, isGameOn, letterStatuses }) {
   };
 
   const handleDelete = () => {
+    if (!isGameOn) return;
     setInputValue(inputValue.slice(0, -1));
   };
 
