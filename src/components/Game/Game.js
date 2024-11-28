@@ -52,7 +52,7 @@ function Game() {
       {gameStatus === "win" && (
         <WonBanner moves={guesses.length} handleReset={restartGame} />
       )}
-      {gameStatus === "lost" && (
+      {gameStatus === "lose" && (
         <LostBanner answer={answer} handleReset={restartGame} />
       )}
     </>

@@ -2,7 +2,7 @@
   "name": "word-game",
   "version": "0.1.0",
   "private": true,
-  "author": "Josh Comeau <me@joshwcomeau.com>",
+  "author": "Josh Comeau and Olgierd Krzyżaniak",
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
     "eslint": "8.49.0",
