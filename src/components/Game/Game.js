@@ -14,7 +14,7 @@ import { getCharStatuses } from "../../game-helpers";
 // console.info({ answer });
 
 function Game() {
-  const [answer, setNewAnswer] = React.useState(sample(WORDS));
+  const [answer, setNewAnswer] = React.useState(() => sample(WORDS));
   const [guesses, setGuesses] = React.useState([]);
   const [gameStatus, setGameStatus] = React.useState("playing");
   console.info({ answer });
